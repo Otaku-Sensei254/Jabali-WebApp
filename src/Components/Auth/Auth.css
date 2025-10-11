@@ -1,0 +1,219 @@
+/* ======== GENERAL STYLES ======== */
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+body.light {
+  background: #f8fafc;
+  color: #1a1a1a;
+}
+
+body.dark {
+  background: #101010;
+  color: #f1f1f1;
+}
+
+/* ======== AUTH CONTAINER ======== */
+.auth-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 2rem;
+}
+
+.auth-card {
+  background: var(--card-bg, white);
+  color: var(--text-color, #1a1a1a);
+  width: 100%;
+  max-width: 420px;
+  padding: 2rem;
+  border-radius: 20px;
+  box-shadow: 0 4px 25px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+}
+
+/* dynamic background via theme */
+body.dark .auth-card {
+  background: #1e1e1e;
+  color: #f9f9f9;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.05);
+}
+
+/* ======== HEADER ======== */
+.auth-header {
+  text-align: center;
+  margin-bottom: 1.8rem;
+}
+
+.auth-header h1 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 0.3rem;
+}
+
+.auth-header p {
+  font-size: 0.9rem;
+  color: #777;
+}
+
+body.dark .auth-header p {
+  color: #aaa;
+}
+
+/* ======== TABS ======== */
+.auth-tabs {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+}
+
+.auth-tabs .tab {
+  background: none;
+  border: none;
+  font-size: 1rem;
+  font-weight: 500;
+  margin: 0 10px;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  color: #888;
+  border-bottom: 2px solid transparent;
+  transition: color 0.3s, border-color 0.3s;
+}
+
+.auth-tabs .tab.active {
+  color: #7fa8d7;
+  border-color: #7fa8d7;
+}
+
+body.dark .auth-tabs .tab.active {
+  color: #a8c9ff;
+  border-color: #a8c9ff;
+}
+
+/* ======== FORM ======== */
+.auth-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group {
+  margin-bottom: 1rem;
+}
+
+label {
+  display: block;
+  font-weight: 500;
+  margin-bottom: 0.3rem;
+}
+
+input {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  outline: none;
+  font-size: 0.95rem;
+  transition: border-color 0.3s ease;
+}
+
+input:focus {
+  border-color: #7fa8d7;
+}
+
+body.dark input {
+  background: #121212;
+  color: #f0f0f0;
+  border: 1px solid #444;
+}
+
+body.dark input:focus {
+  border-color: #a8c9ff;
+}
+
+/* ======== ROLE SELECTOR ======== */
+.role-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 0.5rem;
+}
+
+.role-btn {
+  flex: 1;
+  margin-right: 0.5rem;
+  background: #eee;
+  color: #333;
+  border: none;
+  padding: 0.7rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.role-btn:last-child {
+  margin-right: 0;
+}
+
+.role-btn.active {
+  background: #7fa8d7;
+  color: white;
+}
+
+body.dark .role-btn {
+  background: #2b2b2b;
+  color: #ddd;
+}
+
+body.dark .role-btn.active {
+  background: #a8c9ff;
+  color: #101010;
+}
+
+/* ======== BUTTONS ======== */
+.submit-btn {
+  background: #7fa8d7;
+  color: white;
+  font-weight: 600;
+  padding: 0.9rem;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.submit-btn:hover {
+  background: #6c97c8;
+  transform: translateY(-1px);
+}
+
+body.dark .submit-btn {
+  background: #a8c9ff;
+  color: #101010;
+}
+
+body.dark .submit-btn:hover {
+  background: #8bb8ff;
+}
+
+/* ======== FORGOT PASSWORD ======== */
+.forgot-password {
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.forgot-password a {
+  color: #7fa8d7;
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+.forgot-password a:hover {
+  text-decoration: underline;
+}
+
+body.dark .forgot-password a {
+  color: #a8c9ff;
+}

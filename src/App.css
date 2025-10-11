@@ -1,0 +1,48 @@
+/* src/App.css */
+:root {
+  --primary: #4A90E2;
+  --secondary: #7ED321;
+  --background: #F8F9FA;
+  --surface: #FFFFFF;
+  --text: #2C3E50;
+  --text-secondary: #6C757D;
+  --border: #E9ECEF;
+  --error: #E74C3C;
+  --success: #27AE60;
+}
+
+body.dark {
+  --primary: #5FA8FF;
+  --secondary: #8CE369;
+  --background: #1A1B23;
+  --surface: #2D2E3A;
+  --text: #E9ECEF;
+  --text-secondary: #ADB5BD;
+  --border: #495057;
+  --error: #FF6B6B;
+  --success: #51CF66;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', 'Arial', sans-serif;
+  background-color: var(--background);
+  color: var(--text);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.app {
+  min-height: 100vh;
+}
+
+.content {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: inherit;
+}
