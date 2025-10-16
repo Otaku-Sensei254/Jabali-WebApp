@@ -375,7 +375,30 @@
     font-size: 1.5rem;
   }
 }
-
+@media (max-width:320px){
+  .login-required p{
+    position: relative;
+    right: 1.5rem;
+    width: 200px;
+  }
+  .login-benefits{
+    position: relative;
+    right: 4rem;
+    width: 300px;
+  }
+}
+@media (max-width:375px){
+  .login-required p{
+    position: relative;
+    right: 1.5rem;
+    
+  }
+  .login-benefits{
+    position: relative;
+    right: 4rem;
+    width: 300px;
+  }
+}
 /* Dark mode adjustments */
 body.dark .modal-content {
   background: color-mix(in srgb, var(--surface) 98%, transparent);
