@@ -115,7 +115,7 @@ const Home = () => {
         </div>
 
         <div className="rgt">
-          <img src={Fam} alt="Family illustration" />
+          <img src="https://shorturl.at/0EbkN" alt="Family illustration" />
         </div>
       </section>
 
