@@ -1,0 +1,533 @@
+/* src/styles/games.css */
+.games-container {
+  padding: 2rem;
+  max-width: 1400px;
+  margin: 0 auto;
+  min-height: 100vh;
+}
+
+.games-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.games-header h1 {
+  font-size: 2.5rem;
+  color: var(--text);
+  margin-bottom: 1rem;
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.welcome-message {
+  font-size: 1.1rem;
+  color: var(--text-secondary);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Games Grid */
+.games-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.game-card {
+  background: var(--surface);
+  border-radius: 16px;
+  padding: 1.5rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: 2px solid var(--border);
+  box-shadow: var(--shadow);
+  position: relative;
+  overflow: hidden;
+}
+
+.game-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--primary);
+}
+
+.game-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: var(--game-color);
+}
+
+.game-icon {
+  width: 60px;
+  height: 60px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.game-content h3 {
+  font-size: 1.3rem;
+  color: var(--text);
+  margin-bottom: 0.5rem;
+}
+
+.game-content p {
+  color: var(--text-secondary);
+  margin-bottom: 1rem;
+  line-height: 1.4;
+}
+
+.game-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.difficulty {
+  background: var(--background);
+  padding: 0.3rem 0.8rem;
+  border-radius: 12px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--text);
+  border: 1px solid var(--border);
+}
+
+.duration {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  color: var(--text-secondary);
+  font-size: 0.8rem;
+}
+
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.skill-tag {
+  background: color-mix(in srgb, var(--game-color) 10%, transparent);
+  color: var(--game-color);
+  padding: 0.3rem 0.6rem;
+  border-radius: 8px;
+  font-size: 0.7rem;
+  font-weight: 500;
+}
+
+/* Game Container */
+.game-container {
+  min-height: 100vh;
+  background: var(--background);
+}
+
+.game-header {
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+  padding: 1.5rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: var(--shadow);
+}
+
+.back-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: var(--primary);
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.back-btn:hover {
+  background: color-mix(in srgb, var(--primary) 90%, #000000);
+  transform: translateX(-2px);
+}
+
+.game-info h1 {
+  font-size: 1.8rem;
+  color: var(--text);
+  margin-bottom: 0.5rem;
+}
+
+.game-info p {
+  color: var(--text-secondary);
+  margin: 0;
+}
+
+.game-stats {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.difficulty-badge {
+  background: var(--background);
+  padding: 0.5rem 1rem;
+  border-radius: 12px;
+  font-weight: 600;
+  color: var(--text);
+  border: 1px solid var(--border);
+}
+
+/* Memory Game */
+.memory-game {
+  padding: 2rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.game-stats {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  background: var(--surface);
+  padding: 1rem 1.5rem;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+}
+
+.stat {
+  font-weight: 600;
+  color: var(--text);
+}
+
+.restart-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: var(--primary);
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.restart-btn:hover {
+  background: color-mix(in srgb, var(--primary) 90%, #000000);
+}
+
+.memory-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.memory-card {
+  aspect-ratio: 1;
+  perspective: 1000px;
+  cursor: pointer;
+}
+
+.memory-card .card-front,
+.memory-card .card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  transition: transform 0.6s;
+}
+
+.card-front {
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  color: white;
+  transform: rotateY(0deg);
+}
+
+.card-back {
+  background: var(--surface);
+  border: 2px solid var(--border);
+  transform: rotateY(180deg);
+}
+
+.memory-card.flipped .card-front {
+  transform: rotateY(180deg);
+}
+
+.memory-card.flipped .card-back {
+  transform: rotateY(0deg);
+}
+
+.game-complete {
+  text-align: center;
+  background: var(--surface);
+  padding: 2rem;
+  border-radius: 16px;
+  border: 2px solid var(--success);
+  margin-top: 2rem;
+}
+
+.trophy-icon {
+  font-size: 4rem;
+  color: var(--warning);
+  margin-bottom: 1rem;
+}
+
+.play-again-btn {
+  background: var(--success);
+  color: white;
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 12px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 1rem;
+}
+
+.play-again-btn:hover {
+  background: color-mix(in srgb, var(--success) 90%, #000000);
+  transform: scale(1.05);
+}
+
+/* Puzzle Game */
+.puzzle-game {
+  padding: 2rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.puzzle-instructions {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: var(--text);
+}
+
+.puzzle-area {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+.puzzle-board {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.5rem;
+  background: var(--surface);
+  padding: 1rem;
+  border-radius: 12px;
+  border: 2px solid var(--border);
+}
+
+.puzzle-slot {
+  aspect-ratio: 1;
+  border: 2px dashed var(--border);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  background: var(--background);
+  transition: all 0.3s ease;
+}
+
+.puzzle-slot:hover {
+  border-color: var(--primary);
+}
+
+.puzzle-pieces {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.5rem;
+}
+
+.puzzle-piece {
+  aspect-ratio: 1;
+  background: var(--surface);
+  border: 2px solid var(--border);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  cursor: grab;
+  transition: all 0.3s ease;
+}
+
+.puzzle-piece:hover {
+  transform: scale(1.1);
+  border-color: var(--primary);
+}
+
+.puzzle-piece:active {
+  cursor: grabbing;
+}
+
+.puzzle-complete {
+  text-align: center;
+  background: var(--success);
+  color: white;
+  padding: 1rem;
+  border-radius: 12px;
+  margin-top: 2rem;
+}
+
+/* Coloring Game */
+.coloring-game {
+  padding: 2rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.coloring-controls {
+  background: var(--surface);
+  padding: 1.5rem;
+  border-radius: 16px;
+  margin-bottom: 2rem;
+  border: 1px solid var(--border);
+}
+
+.color-palette {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.color-swatch {
+  aspect-ratio: 1;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: 3px solid transparent;
+}
+
+.color-swatch:hover {
+  transform: scale(1.1);
+}
+
+.color-swatch.active {
+  border-color: var(--text);
+  transform: scale(1.1);
+}
+
+.image-selector h4 {
+  color: var(--text);
+  margin-bottom: 1rem;
+}
+
+.image-options {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.image-option {
+  background: var(--background);
+  border: 2px solid var(--border);
+  border-radius: 8px;
+  padding: 0.75rem;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.image-option:hover {
+  border-color: var(--primary);
+  transform: scale(1.05);
+}
+
+.image-option.active {
+  border-color: var(--primary);
+  background: color-mix(in srgb, var(--primary) 10%, transparent);
+}
+
+.coloring-canvas {
+  background: var(--surface);
+  padding: 3rem;
+  border-radius: 16px;
+  text-align: center;
+  border: 1px solid var(--border);
+}
+
+.coloring-hint {
+  color: var(--text-secondary);
+  margin-top: 1rem;
+  font-style: italic;
+}
+
+/* Placeholder */
+.game-placeholder {
+  text-align: center;
+  padding: 4rem 2rem;
+  color: var(--text-secondary);
+}
+
+.game-placeholder h2 {
+  color: var(--text);
+  margin-bottom: 1rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .games-container {
+    padding: 1rem;
+  }
+
+  .games-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .game-header {
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+  }
+
+  .memory-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .puzzle-area {
+    grid-template-columns: 1fr;
+  }
+
+  .color-palette {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  .game-card,
+  .memory-card,
+  .puzzle-piece,
+  .color-swatch,
+  .image-option {
+    transition: none;
+  }
+
+  .game-card:hover,
+  .puzzle-piece:hover,
+  .color-swatch:hover,
+  .image-option:hover {
+    transform: none;
+  }
+}

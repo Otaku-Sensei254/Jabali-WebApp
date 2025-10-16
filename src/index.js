@@ -15,6 +15,7 @@ import Dashboard from "./pages/Dashboard";
 import Footer from "./Components/Footer/Footer";
 import { ChildProvider } from "./Components/Context/ChildContext";
 import AuthPage from "./Components/Auth/AuthPage";
+import Games from "./pages/Games";
 
 // Protected Route Component
 const ProtectedRoute = ({ children }) => {
@@ -44,9 +45,10 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: (
-      <ProtectedRoute>
+      
         <AuthenticatedLayout />
-      </ProtectedRoute>
+        
+      
     ),
     children: [
       {
@@ -72,6 +74,10 @@ const router = createBrowserRouter([
       {
         path: "/dashboard",
         element: <Dashboard />,
+      },
+      {
+        path: "/games",
+        element: <Games/>,
       },
     ],
   },

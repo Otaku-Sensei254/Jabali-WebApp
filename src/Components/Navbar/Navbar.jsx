@@ -20,6 +20,7 @@ const Navbar = () => {
     { key: 'learning', label: 'Learning', path: '/learning' },
     { key: 'music', label: 'Music', path: '/music' },
     { key: 'profiles', label: 'Profiles', path: '/profiles' },
+    { key: 'games', label: 'Games', path: '/games' },
     { key: 'dashboard', label: 'Dashboard', path: '/dashboard' }
   ];
 
@@ -27,7 +28,7 @@ const Navbar = () => {
     userName ? userName.charAt(0).toUpperCase() : userRole ? userRole.charAt(0).toUpperCase() : 'U';
 
   const getDisplayName = () => (userName ? userName : userRole === 'parent' ? 'Parent' : 'Caregiver');
-
+  const getChildName = () => (selectedChild ? selectedChild.name : 'No Child Selected');  
   const handleLogoutClick = () => setShowLogoutConfirm(true);
   
   const confirmLogout = () => {
@@ -69,6 +70,11 @@ const Navbar = () => {
 
           <div className="user-section">
             <span className="username">{getDisplayName()}</span>
+            {/*
+              <span className="child">{getChildName()}</span>
+            */
+            }
+              
             <div className="user-avatar" onClick={handleLogoutClick}>
               <span className="avatar-icon">{getAvatarLetter()}</span>
             </div>

@@ -55,7 +55,7 @@ const Learning = () => {
       id: 3,
       level: "beginner",
       category: "visual",
-      videoId: "sSRD1ZJEUbY",
+      videoId: "NGzBZhLHn_w",
       tags: ["colors", "shapes", "visual"],
       source: "youtube"
     },
@@ -63,7 +63,7 @@ const Learning = () => {
       id: 4,
       level: "intermediate",
       category: "math",
-      videoId: "igcoDFokKzU",
+      videoId: "aya6NOyVo3g",
       tags: ["addition", "math", "numbers"],
       source: "youtube"
     },
